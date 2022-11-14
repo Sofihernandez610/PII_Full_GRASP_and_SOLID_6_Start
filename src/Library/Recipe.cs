@@ -16,7 +16,14 @@ namespace Full_GRASP_And_SOLID
 
         public Product FinalProduct { get; set; }
 
-        public bool Cooked = false;
+        public bool Cooked {get; private set;} = false;
+
+        public void SetCooked()
+        {
+            this.Cooked = true;
+        }
+    
+
         // Agregado por Creator
         public void AddStep(Product input, double quantity, Equipment equipment, int time)
         {
